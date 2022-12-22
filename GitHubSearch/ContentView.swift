@@ -18,20 +18,23 @@ struct ContentView: View {
     @State private var currentTimer: Timer?
     
     @State private var queryCount = 0
+    @State private var showDetailView = false
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             if !searchText.isEmpty,
                let searchResults = searchResults,
                searchResults.items.count > 0 {
                 List {
-                    ForEach(searchResults.items, id: \.self) { element in
-                        RepositoryCell(repository: element)
-                            .onAppear() {
-                                if searchResults.items.last == element && !searchResults.allItemsQueried {
-                                    query()
+                    ForEach(searchResults.items, id: \.self) { item in
+                        NavigationLink(destination: GithubRepositoryDetailView(withResultItem: item)) {
+                            RepositoryCell(repository: item)
+                                .onAppear() {
+                                    if searchResults.items.last == item && !searchResults.allItemsQueried {
+                                        query()
+                                    }
                                 }
-                            }
+                        }
                     }
                 }
                 .navigationTitle(appTitle)

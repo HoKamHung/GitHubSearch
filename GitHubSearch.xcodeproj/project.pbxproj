@@ -14,6 +14,7 @@
 		843FC4A22953111D0057A7F5 /* GithubRepositoryModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FC4A12953111D0057A7F5 /* GithubRepositoryModal.swift */; };
 		843FC4A429534C660057A7F5 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FC4A329534C660057A7F5 /* RepositoryCell.swift */; };
 		843FC4A629534D990057A7F5 /* image@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843FC4A529534D990057A7F5 /* image@3x.png */; };
+		84F72ECC2953F4F4008BFFD6 /* GithubRepositoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F72ECB2953F4F4008BFFD6 /* GithubRepositoryDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		843FC4A12953111D0057A7F5 /* GithubRepositoryModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryModal.swift; sourceTree = "<group>"; };
 		843FC4A329534C660057A7F5 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		843FC4A529534D990057A7F5 /* image@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image@3x.png"; sourceTree = "<group>"; };
+		84F72ECB2953F4F4008BFFD6 /* GithubRepositoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepositoryDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				84216BA02951C0E200D09501 /* GitHubSearchApp.swift */,
+				84F72ECB2953F4F4008BFFD6 /* GithubRepositoryDetailView.swift */,
 				84216BA22951C0E200D09501 /* ContentView.swift */,
 				843FC4A12953111D0057A7F5 /* GithubRepositoryModal.swift */,
 				843FC4A329534C660057A7F5 /* RepositoryCell.swift */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84216BA32951C0E200D09501 /* ContentView.swift in Sources */,
+				84F72ECC2953F4F4008BFFD6 /* GithubRepositoryDetailView.swift in Sources */,
 				84216BA12951C0E200D09501 /* GitHubSearchApp.swift in Sources */,
 				843FC4A22953111D0057A7F5 /* GithubRepositoryModal.swift in Sources */,
 				843FC4A429534C660057A7F5 /* RepositoryCell.swift in Sources */,
