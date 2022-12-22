@@ -22,8 +22,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            if !searchText.isEmpty,
-               let searchResults = searchResults,
+            if let searchResults = searchResults,
                searchResults.items.count > 0 {
                 List {
                     ForEach(searchResults.items, id: \.self) { item in
@@ -38,15 +37,27 @@ struct ContentView: View {
                     }
                 }
                 .navigationTitle(appTitle)
+            } else if !searchText.isEmpty,
+                      let timer = currentTimer,
+                      timer.isValid {
+                HStack {
+                    Text("Searching.")
+                    ProgressView()
+                }
+                .frame(height: 64)
+                .navigationTitle(appTitle)
             } else {
                 Text("No result found.")
                     .navigationTitle(appTitle)
             }
         }
-        
         .searchable(text: $searchText)
         .onChange(of: searchText, perform: { newValue in
-            query(newQuery: true)
+            if searchText.count > 0 {
+                query(newQuery: true)
+            } else {
+                searchResults = nil
+            }
         })
     }
     
